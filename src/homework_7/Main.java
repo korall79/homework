@@ -4,21 +4,21 @@ public class Main {
     public static void main(String[] args) {
         Cat barsic = new Cat("Barsic", 1, "whit");
         Cat marusia = new Cat("Marusia", "grey");
-        Cat vasia = new Cat("brown");
+        Cat brownCat = new Cat("brown");
 
         barsic.catInfo();
         marusia.catInfo();
-        vasia.catInfo();
+        brownCat.catInfo();
 
         System.out.println();
         barsic.say();
         marusia.say();
-        vasia.say();
+        brownCat.say();
 
         System.out.println();
-        barsic.eat(5);
+        barsic.eat(-5);
         marusia.eat(10);
-        vasia.eat(1);
+        brownCat.eat(1);
 
     }
 }

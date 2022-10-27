@@ -35,6 +35,10 @@ public class Cat {
      * @param food количество еды
      */
     public void eat( int food) {
+        if (food<0){
+            System.out.println("Ошибка! Количество еды не должно быть отрицательным");
+            return;
+        }
         if (food >= 10) {
             System.out.printf("Кот %s сытый\n", getName());
         } else {
@@ -62,6 +66,7 @@ public class Cat {
      */
     public Cat(String color) {
         this.color = color;
+       // this.age=-1;
     }
 
     /**
@@ -73,31 +78,32 @@ public class Cat {
     public Cat(String name, String color) {
         this.name = name;
         this.color = color;
+        //this.age= -1;
     }
 
     public String getName() {
         if (name!=null){
             return name;
-        }else return "";
+        }else return "неизестный";
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
+//    public void setName(String name) {
+//        this.name = name;
+//    }
+//
+//    public int getAge() {
+//        return age;
+//    }
+//
+//    public void setAge(int age) {
+//        this.age = age;
+//    }
+//
+//    public String getColor() {
+//        return color;
+//    }
+//
+//    public void setColor(String color) {
+//        this.color = color;
+//    }
 }
