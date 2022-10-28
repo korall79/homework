@@ -12,12 +12,15 @@ public class Circle extends FigureCalculations {
     }
 
     /**
-     *
+     *Метод расчитывает площадь круга
      */
     public void printArea(){
         System.out.println("Площадь круга равна "+ (Math.PI*radius*radius));
     }
 
+    /**
+     * Метод расчитывает параметр круга
+     */
     @Override
     public void printPerimeter() {
         System.out.println("Периметр окружности равен "+(2*Math.PI*radius));

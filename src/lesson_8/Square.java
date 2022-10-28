@@ -20,7 +20,7 @@ public class Square extends FigureCalculations {
         }
 
     /**
-     * Метод вычисляет площадь
+     * Метод вычисляет площадь квадрата
      */
     public void printArea(){
 //        if (sideLength<=0){
@@ -30,6 +30,9 @@ public class Square extends FigureCalculations {
             System.out.println("Площадь квадрата равна "+ (sideLength*sideLength));
         }
 
+    /**
+     * Метод вычисляет периметр квадрата
+     */
     @Override
     public void printPerimeter() {
         System.out.println("Периметр квадрата равен "+ (sideLength*4));

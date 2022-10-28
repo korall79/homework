@@ -3,7 +3,7 @@ package lesson_8;
 import java.util.Scanner;
 
 public class Main {
-
+    char[] symbols = null;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -120,6 +120,8 @@ public class Main {
         Circle circle = new Circle(Double.parseDouble(radius));
         circle.printPerimeter();
     }
+
+
 
 
 }

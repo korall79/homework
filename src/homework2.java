@@ -17,7 +17,7 @@ public class homework2 {
         for (int i = 0; i < romb.length; i++) {
             for (int j = 0; j < romb[i].length; j++) {
 
-//                if ((i + j) >= romb[i].length / 2 && (j - i) <= romb[i].length / 2 && (i - j) <= romb[i].length / 2)
+              // if ((i + j) >= romb[i].length / 2 && (j - i) <= romb[i].length / 2 && (i - j) <= romb[i].length / 2){
 
                 if (j >= startIndex && j <= endIndex)
                     romb[i][j] = 1;
