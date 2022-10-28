@@ -3,7 +3,7 @@ package lesson_8;
 /***
  * Класс вычисляет площадь круга
  */
-public class Circle {
+public class Circle extends FigureCalculations {
 
     private double radius;
 
@@ -16,5 +16,10 @@ public class Circle {
      */
     public void printArea(){
         System.out.println("Площадь круга равна "+ (Math.PI*radius*radius));
+    }
+
+    @Override
+    public void printPerimeter() {
+        System.out.println("Периметр окружности равен "+(2*Math.PI*radius));
     }
 }

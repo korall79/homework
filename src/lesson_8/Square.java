@@ -3,7 +3,7 @@ package lesson_8;
 /***
  * Класс вычисляет площадь квадрата
  */
-public class Square {
+public class Square extends FigureCalculations {
 
     private double sideLength;
 
@@ -19,8 +19,6 @@ public class Square {
           this.sideLength = sideLength;
         }
 
-
-
     /**
      * Метод вычисляет площадь
      */
@@ -32,5 +30,10 @@ public class Square {
             System.out.println("Площадь квадрата равна "+ (sideLength*sideLength));
         }
 
+    @Override
+    public void printPerimeter() {
+        System.out.println("Периметр квадрата равен "+ (sideLength*4));
     }
+
+}
 

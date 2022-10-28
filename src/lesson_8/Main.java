@@ -12,8 +12,10 @@ public class Main {
 
         while (!"0".equals(input)) {
             System.out.println("Введите фигуру (номер)\n" +
-                    "1 - Квадрат\n" +
-                    "2 - Круг\n" +
+                    "1 - Площадь квадрата\n" +
+                    "2 - Площадь круга\n" +
+                    "3 - Периметр квадрата\n" +
+                    "4 - Периметр круга\n" +
                     "0 - Выход из программы");
 
             input = scanner.nextLine();
@@ -24,6 +26,12 @@ public class Main {
                     break;
                 case "2":
                     printCircleArea(scanner);
+                    break;
+                case "3":
+                    printSquarePerimeter(scanner);
+                    break;
+                case "4":
+                    printCirclePerimeter(scanner);
                     break;
                 case "0":
                     break;
@@ -57,7 +65,7 @@ public class Main {
     }
 
     /**
-     * Метод ввода данных для круга
+     * Метод ввода данных для площади круга
      *
      * @param scanner
      */
@@ -73,6 +81,44 @@ public class Main {
         }
         Circle circle = new Circle(Double.parseDouble(radius));
         circle.printArea();
+    }
+    /**
+     * Метод ввода данных для периметра квадрата
+     *
+     * @param scanner
+     */
+    private static void printSquarePerimeter(Scanner scanner) {
+        System.out.println("Введите длину стороны квадрата");
+        String sideLength = scanner.nextLine();
+        char[] symbols = sideLength.toCharArray();
+        for (char symbol : symbols) {
+            if (symbol == '-' || symbol == '0') {
+                System.out.println("Ошибка! Длина стороны квадрата должна быть положительной");
+                return;
+            }
+        }
+        Square square = new Square(Double.parseDouble(sideLength));
+        square.printPerimeter();
+    }
+
+
+    /**
+     * Метод ввода данных для периметра круга
+     *
+     * @param scanner
+     */
+    private static void printCirclePerimeter(Scanner scanner) {
+        System.out.println("Введите радиус круга");
+        String radius = scanner.nextLine();
+        char[] symbols = radius.toCharArray();
+        for (char symbol : symbols) {
+            if (symbol == '-' || symbol == '0') {
+                System.out.println("Ошибка! Длина стороны квадрата должна быть положительной");
+                return;
+            }
+        }
+        Circle circle = new Circle(Double.parseDouble(radius));
+        circle.printPerimeter();
     }
 
 
