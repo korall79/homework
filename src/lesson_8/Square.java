@@ -22,6 +22,7 @@ public class Square extends FigureCalculations {
     /**
      * Метод вычисляет площадь квадрата
      */
+    @Override
     public void printArea(){
 //        if (sideLength<=0){
 //            System.out.println("Ошибка! Длина стороны квадрата должна быть положительной");

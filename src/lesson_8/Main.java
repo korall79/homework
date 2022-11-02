@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Main {
     char[] symbols = null;
 
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String input = null;
