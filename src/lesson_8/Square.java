@@ -39,5 +39,8 @@ public class Square extends FigureCalculations {
         System.out.println("Периметр квадрата равен "+ (sideLength*4));
     }
 
+    public double getSideLength() {
+        return sideLength;
+    }
 }
 
