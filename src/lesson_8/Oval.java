@@ -11,11 +11,17 @@ public class Oval extends Circle{
         this.radius2 = radius2;
     }
 
+    /**
+     * Метод вычисляет площадь овала
+     */
     @Override
     public void printArea() {
         System.out.println("Площадь овала равна: " + (Math.PI*getRadius() * radius2));
     }
 
+    /**
+     * Метод вычисляет периметр овала
+     */
     @Override
     public void printPerimeter() {
         System.out.println("Периметр овала равен: " +

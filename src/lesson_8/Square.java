@@ -42,5 +42,7 @@ public class Square extends FigureCalculations {
     public double getSideLength() {
         return sideLength;
     }
+
+
 }
 
