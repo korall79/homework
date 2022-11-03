@@ -113,8 +113,8 @@ public class Main {
         System.out.println("Введите длину стороны квадрата");
         String sideLength = scanner.nextLine();
 
-        double symbol = Double.parseDouble(sideLength);
-        if (symbol <= 0) {
+        double symbol1 = Double.parseDouble(sideLength);
+        if (symbol1 <= 0) {
             System.out.println("Ошибка! Вводимые значения должны быть положительными");
             return;
         }
@@ -136,17 +136,14 @@ public class Main {
 
     /**
      * Метод проверяет вводимые символы
-     * @param symbol
      */
     private static void characterCheck(String symbol) {
-
         double symbol1 = Double.parseDouble(symbol);
         if (symbol1 <= 0) {
             System.out.println("Ошибка! Вводимые значения должны быть положительными");
             return;
         }
-
     }
-
 }
+
 
