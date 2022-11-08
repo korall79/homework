@@ -9,7 +9,7 @@ public class Rectangle extends Square{
      * Конструктор
      *
      * @param sideLength длина стороны
-     * @param sideWidth
+     * @param sideWidth высота стороны
      */
     public Rectangle(String sideLength, String sideWidth) {
         super(Double.parseDouble(sideLength));

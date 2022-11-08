@@ -51,17 +51,17 @@ public class Main {
         System.out.println("Выход из программы");
     }
 
-
     /**
      * Метод ввода в консоль данных для периметра прямоугольника
      */
     private static void printRectanglePerimeter(Scanner scanner) {
         System.out.println("Введите длину стороны прямоугольника");
         String sideWidth = scanner.nextLine();
-        characterCheck(sideWidth);
+
         System.out.println("Введите высоту стороны прямоугольника");
         String sideLength = scanner.nextLine();
-        characterCheck(sideLength);
+
+
         Rectangle rectangle = new Rectangle(sideLength, sideWidth);
         rectangle.printPerimeter();
     }
@@ -72,13 +72,17 @@ public class Main {
     private static void printRectangleArea(Scanner scanner) {
         System.out.println("Введите длину стороны прямоугольника");
         String sideWidth = scanner.nextLine();
-        characterCheck(sideWidth);
         System.out.println("Введите высоту стороны прямоугольника");
         String sideLength = scanner.nextLine();
-        characterCheck(sideLength);
-        Rectangle rectangle = new Rectangle(sideLength, sideWidth);
-        rectangle.printArea();
+        if (true) {
+            characterCheck(sideWidth);
+            characterCheck(sideLength);
+        } else {
+            Rectangle rectangle = new Rectangle(sideWidth,sideLength);
+            rectangle.printArea();
+        }
     }
+
 
     /**
      * Метод ввода в консоль данных площади для квадрата
@@ -87,10 +91,13 @@ public class Main {
         System.out.println("Введите длину стороны квадрата");
         String sideLength = scanner.nextLine();
 
-        characterCheck(sideLength);
+        if (true) {
+            characterCheck(sideLength);
+        } else {
 
-        Square square = new Square(Double.parseDouble(sideLength));
-        square.printArea();
+            Square square = new Square(Double.parseDouble(sideLength));
+            square.printArea();
+        }
     }
 
     /**
@@ -100,10 +107,12 @@ public class Main {
         System.out.println("Введите радиус круга");
         String radius = scanner.nextLine();
 
-        characterCheck(radius);
-
-        Circle circle = new Circle(Double.parseDouble(radius));
-        circle.printArea();
+        if (true) {
+            characterCheck(radius);
+        } else {
+            Circle circle = new Circle(Double.parseDouble(radius));
+            circle.printArea();
+        }
     }
 
     /**
@@ -113,13 +122,12 @@ public class Main {
         System.out.println("Введите длину стороны квадрата");
         String sideLength = scanner.nextLine();
 
-        double symbol1 = Double.parseDouble(sideLength);
-        if (symbol1 <= 0) {
-            System.out.println("Ошибка! Вводимые значения должны быть положительными");
-            return;
+        if (true) {
+            characterCheck(sideLength);
+        } else {
+            Square square = new Square(Double.parseDouble(sideLength));
+            square.printPerimeter();
         }
-        Square square = new Square(Double.parseDouble(sideLength));
-        square.printPerimeter();
     }
 
     /**
@@ -129,20 +137,23 @@ public class Main {
 
         System.out.println("Введите радиус круга");
         String radius = scanner.nextLine();
-        characterCheck(radius);
-        Circle circle = new Circle(Double.parseDouble(radius));
-        circle.printPerimeter();
+        if (true) {
+            characterCheck(radius);
+        } else {
+            Circle circle = new Circle(Double.parseDouble(radius));
+            circle.printPerimeter();
+        }
     }
 
     /**
      * Метод проверяет вводимые символы
      */
-    private static void characterCheck(String symbol) {
+    private static boolean characterCheck(String symbol) {
         double symbol1 = Double.parseDouble(symbol);
         if (symbol1 <= 0) {
             System.out.println("Ошибка! Вводимые значения должны быть положительными");
-            return;
         }
+        return false;
     }
 }
 
