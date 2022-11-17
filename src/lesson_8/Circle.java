@@ -29,7 +29,7 @@ public class Circle extends FigureCalculations {
     }
 
     /**
-     * Метод расчитывает параметр круга
+     * Метод расчитывает периметр круга
      */
     @Override
     public void printPerimeter() {

@@ -91,13 +91,13 @@ public class Main {
         System.out.println("Введите длину стороны квадрата");
         String sideLength = scanner.nextLine();
 
-        if (true) {
-            characterCheck(sideLength);
-        } else {
+
+            //characterCheck(sideLength);
+
 
             Square square = new Square(Double.parseDouble(sideLength));
             square.printArea();
-        }
+
     }
 
     /**
@@ -137,23 +137,24 @@ public class Main {
 
         System.out.println("Введите радиус круга");
         String radius = scanner.nextLine();
-        if (true) {
-            characterCheck(radius);
-        } else {
-            Circle circle = new Circle(Double.parseDouble(radius));
-            circle.printPerimeter();
-        }
+
+           characterCheck(String.valueOf(Double.parseDouble(radius)));
+
+           Circle circle = new Circle(Double.parseDouble(radius));
+           circle.printPerimeter();
+
     }
 
     /**
      * Метод проверяет вводимые символы
+     * @return
      */
     private static boolean characterCheck(String symbol) {
         double symbol1 = Double.parseDouble(symbol);
         if (symbol1 <= 0) {
             System.out.println("Ошибка! Вводимые значения должны быть положительными");
-        }
-        return false;
+        }return false;
+
     }
 }
 
