@@ -1,6 +1,6 @@
 package lesson__11.task_1;
 
-public class Matrix implements IMatrix {
+public  class Matrix implements IMatrix {
 
     private double[][] matrix;
 
@@ -17,6 +17,7 @@ public class Matrix implements IMatrix {
     public Matrix(double[][] matrix) {
         this.matrix = matrix;
     }
+
 
     @Override
     public int getRows() {
@@ -39,7 +40,7 @@ public class Matrix implements IMatrix {
     @Override
     public void setValueAt(int rowIndex, int colIndex, double value) throws IndexOutOfBoundsException {
         if (rowIndex >= getRows() || colIndex >= getColumns() || rowIndex < 0 || colIndex < 0) {
-            System.out.println("Ошибака! передан не вырный индекс");
+            System.out.println("Ошибака! передан не верный индекс");
         }
         matrix[rowIndex][colIndex] = value;
 
@@ -48,26 +49,28 @@ public class Matrix implements IMatrix {
     @Override
     public IMatrix add(IMatrix otherMatrix) throws IllegalArgumentException, NullPointerException {
 
-        int sumMatrix = 0;
-        int sumOtherMatrix = 0;
-//        for (int i = 0; i < matrix.length; ++i){
-//            sumMatrix = sumMatrix + matrix[i];
-//        }
-        for (int i = 0; i < getRows(); i++) {
-            for (int j = 0; j < getColumns(); j++) {
-                sumMatrix = (int) (sumMatrix + matrix[i][j]);
+
+        double[][] matrixSum = new double[matrix.length][matrix[0].length];
+        double[][] matrix2 = new double[3][3];
+
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                double numMatrix1 = matrix[i][j];
+                double numMatrix2 = matrix2[i][j];
+                double sum = numMatrix1 + numMatrix2;
+                matrixSum[i][j] = sum;
+
             }
         }
-        for (int i = 0; i < getRows(); i++) {
-            for (int j = 0; j < getColumns(); j++) {
-                sumOtherMatrix = (int) (sumOtherMatrix + matrix[i][j]);
+
+        for (int i = 0; i < matrixSum.length; i++) {
+            for (int j = 0; j < matrixSum[i].length; j++) {
+                System.out.print(matrixSum[i][j] + "   ");
             }
+            System.out.println();
         }
-        System.out.println(sumMatrix);
-        System.out.println(sumOtherMatrix);
-        IMatrix matrix = new Matrix(getRows(),getColumns());
-        //System.out.println(matrix);
-        return  matrix;
+        IMatrix matrix = new Matrix(matrixSum);
+        return matrix;
     }
 
     @Override
