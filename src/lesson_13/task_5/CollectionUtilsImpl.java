@@ -7,7 +7,7 @@ import java.util.Set;
 
 public class CollectionUtilsImpl implements CollectionUtils{
     @Override
-    public Collection<Integer> union(Collection<Integer> a, Collection<Integer> b) throws NullPointerException {
+    public Collection<Integer> union(Collection<Integer> a, Collection<Integer> b) throws NullPointerException {//123454567
         List<Integer> result = new ArrayList<>();
         if(a== null || b == null){
             System.out.println("Колекция не может быть нал");
@@ -27,22 +27,27 @@ public class CollectionUtilsImpl implements CollectionUtils{
     }
 
     @Override
-    public Collection<Integer> intersection(Collection<Integer> a, Collection<Integer> b) throws NullPointerException {
+    public Collection<Integer> intersection(Collection<Integer> a, Collection<Integer> b) throws NullPointerException { //4545
+        ArrayList<Integer> resultIntersection = new ArrayList<>();
+      //  if (a==b)
+//contains
+            resultIntersection.addAll(a);
+            resultIntersection.addAll(b);
+        return resultIntersection;
+    }
+
+    @Override
+    public Set<Integer> unionWithoutDuplicate(Collection<Integer> a, Collection<Integer> b) throws NullPointerException {//1234567
         return null;
     }
 
     @Override
-    public Set<Integer> unionWithoutDuplicate(Collection<Integer> a, Collection<Integer> b) throws NullPointerException {
+    public Set<Integer> intersectionWithoutDuplicate(Collection<Integer> a, Collection<Integer> b) throws NullPointerException {//45
         return null;
     }
 
     @Override
-    public Set<Integer> intersectionWithoutDuplicate(Collection<Integer> a, Collection<Integer> b) throws NullPointerException {
-        return null;
-    }
-
-    @Override
-    public Collection<Integer> difference(Collection<Integer> a, Collection<Integer> b) throws NullPointerException {
+    public Collection<Integer> difference(Collection<Integer> a, Collection<Integer> b) throws NullPointerException {//12367
         return null;
     }
 }

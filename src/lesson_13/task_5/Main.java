@@ -23,6 +23,10 @@ public class Main {
         listB.add(7);
 
         Collection<Integer> result = utils.union(listA,listB);
+        System.out.println(result);
+
+        Collection<Integer> resultIntersection = utils.intersection(listA,listB);
+        System.out.println(resultIntersection);
 
     }
 }
