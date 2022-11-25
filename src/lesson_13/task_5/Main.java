@@ -22,11 +22,22 @@ public class Main {
         listB.add(6);
         listB.add(7);
 
-        Collection<Integer> result = utils.union(listA,listB);
+        Collection<Integer> result = utils.union(listA,listB);//123454567
         System.out.println(result);
 
-        Collection<Integer> resultIntersection = utils.intersection(listA,listB);
+        Collection<Integer> resultIntersection = utils.intersection(listA,listB);//4545
         System.out.println(resultIntersection);
+
+        Collection<Integer> resultUWD = utils.unionWithoutDuplicate(listA,listB);//1234567
+        System.out.println(resultUWD);
+
+        Collection<Integer> resultIWD = utils.intersectionWithoutDuplicate(listA,listB);//45
+        System.out.println(resultIWD);
+
+        Collection<Integer> difference = utils.difference(listA,listB);//12367
+        System.out.println(difference);
+
+
 
     }
 }

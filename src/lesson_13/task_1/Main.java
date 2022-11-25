@@ -1,4 +1,4 @@
-package lesson_13.task_5.task_1;
+package lesson_13.task_1;
 
 import java.util.ArrayList;
 import java.util.HashSet;
