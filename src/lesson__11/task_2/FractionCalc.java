@@ -15,12 +15,15 @@ public class FractionCalc implements IFractionCalc, IFraction {
 
         Fraction sum = new Fraction(sumNumerator, sumDenominator);
 
-        if (sumDenominator % 2 == 0) {
+        if (sumDenominator == sumNumerator) {
+            sumNumerator = 1;
+            sumDenominator=1;
+        } else {
 
-        }
-
-
-        return sum;
+           if (sumNumerator%2==0){
+              int a= sumNumerator%2;
+           }
+        }return sum;
     }
 
     @Override
