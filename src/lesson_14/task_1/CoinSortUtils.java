@@ -8,6 +8,7 @@ public class CoinSortUtils {
     public static void printCoinByMetalAsc(Set<Coin> coins) {
         TreeSet<Coin> sortedCoins = new TreeSet<>(new ByMetalAscComparator());
         sortedCoins.addAll(coins);
+
         for (Coin coin : sortedCoins) {
             System.out.println(coin);
         }
@@ -47,6 +48,10 @@ public class CoinSortUtils {
         }
     }
 
+    /**
+     * Сортировка монет по году по убыванию с помощью ананимного класса
+     * @param coins
+     */
     public static void PrintCoinByYearDesk(Set<Coin> coins){
         TreeSet<Coin>sortedCoinsYear = new TreeSet<>(new Comparator<Coin>() {
             @Override

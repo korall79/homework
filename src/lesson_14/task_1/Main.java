@@ -2,9 +2,7 @@ package lesson_14.task_1;
 
 import com.sun.source.doctree.SeeTree;
 
-import java.util.HashSet;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
