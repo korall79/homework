@@ -1,6 +1,8 @@
 package blackJack;
 
-public class Deck {
+import blackJack.interfaces.IDeck;
+
+public class Deck implements IDeck {
 
     private Card[]cards=new Card[52];
 
@@ -133,7 +135,7 @@ public class Deck {
 
         cards[51] = new Card("Туз пик", 11);
     }
-
+@Override
     public Card getRandomCard(){
         return cards[(int) (Math.random() * 52)];
 //        int index = (int) (Math.random() * 52);
