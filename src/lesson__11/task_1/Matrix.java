@@ -32,7 +32,7 @@ public  class Matrix implements IMatrix {
     @Override
     public double getValueAt(int rowIndex, int colIndex) throws IndexOutOfBoundsException {
         if (rowIndex >= getRows() || colIndex >= getColumns() || rowIndex < 0 || colIndex < 0) {
-            System.out.println("Ошибака! передан не вырный индекс");
+            throw new IndexOutOfBoundsException("Ошибака! передан не вырный индекс");
         }
         return matrix[rowIndex][colIndex];
     }
