@@ -31,7 +31,8 @@ public interface StringUtils {
 	int[] findWord (String text, String word) throws NullPointerException;
 	
 	/**
-	 * Находит в тексте все double числа и возвращает их в виде массива. Если чисел не обнаружено в тексте необходимо выбросить исключение CustomException с сообщением:
+	 * Находит в тексте все double числа и возвращает их в виде массива. Если чисел не обнаружено в
+	 * тексте необходимо выбросить исключение CustomException с сообщением:
 	 * <b>"Not found"</b>
 	 * 
 	 * @param text исходный текст
@@ -39,4 +40,5 @@ public interface StringUtils {
 	 * @throws CustomException если чисел в тексте не обнаружено
 	 */
 	double[] findNumbers(String text) throws CustomException;
+
 }
