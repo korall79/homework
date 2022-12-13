@@ -1,4 +1,4 @@
-package lesson__11.task_1;
+package lesson_11.task_1;
 
 public  class Matrix implements IMatrix {
 

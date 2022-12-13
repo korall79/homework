@@ -1,4 +1,4 @@
-package lesson__11.task_1_1;
+package lesson_11.task_1_1;
 
 /**
  * Класс для работы с матрицами
