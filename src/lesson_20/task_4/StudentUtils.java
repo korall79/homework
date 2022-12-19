@@ -4,14 +4,25 @@ import java.util.List;
 
 public class StudentUtils {
 
-    public static void filter(List<Student>students, IFilter filter){
+    public static void filter(List<Student> students, IFilter filter) {
 
         for (Student student : students) {
-            if (filter.test(student)){
+            if (filter.test(student)) {
                 System.out.println(student);
             }
-
+        }
+    }
+    public static void filterCourse(List<Student>students, Filter filterCourse){
+        for (Student student : students) {
+            if (filterCourse.test1(student)){
+                System.out.println(student);
+            }
         }
 
     }
+
 }
+
+
+
+
