@@ -12,15 +12,20 @@ public class BlackJack implements IBlackJack {
     private Set<IPlayer> players = new HashSet<>();
     private IDeck deck = new Deck();
 
+    /**
+     * раздает по две карты
+     */
     @Override
     public void dealTwoCards() {
         for (IPlayer player: players) {
             player.addCardToHand(deck.getRandomCard());
             player.addCardToHand(deck.getRandomCard());
-            
         }
     }
 
+    /**
+     * Раздает добавочные карты при необходимости
+     */
     @Override
     public void addCardsToPlayers() {
         for (IPlayer player : players) {
@@ -31,6 +36,9 @@ public class BlackJack implements IBlackJack {
 
     }
 
+    /**
+     * Напечатать победителя в консоль
+     */
     @Override
     public void printWinner() {
         //у всех перебор - победил крупье
@@ -38,13 +46,15 @@ public class BlackJack implements IBlackJack {
         //одинаковое макс очки - победили игроки с макс очками
 
         Set<IPlayer> notBustPlayers = new HashSet<>();
-        for (IPlayer player : notBustPlayers) {
+
+        for (IPlayer player : players) {
             if (player.countValues() <= 21){
                 notBustPlayers.add(player);
+
             }
         }
         if (notBustPlayers.isEmpty()){
-            System.out.println("Победил крупье!");
+            System.out.println("Победил крупье!" );
             return;
         }
         if (notBustPlayers.size()==1){
@@ -61,10 +71,10 @@ public class BlackJack implements IBlackJack {
             if (player.countValues() == max) {
                 System.out.println(player.getName());
                 player.openCards();
+                player.countValues();
             }
 
         }
-
     }
 
     /**
@@ -77,11 +87,16 @@ public class BlackJack implements IBlackJack {
         for (IPlayer player : players) {
             if (player.countValues() >max){
                 max= player.countValues();
+
             }
         }
         return max;
     }
 
+    /**
+     * Добавляет игроков в игру
+     * @param player
+     */
     @Override
     public void addPlayerToGame(IPlayer player) {
         players.add(player);
