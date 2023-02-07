@@ -17,11 +17,19 @@ public class Player implements IPlayer {
         this.name = name;
     }
 
+    /**
+     * смотрит карты
+     * @param card
+     */
     @Override
     public void addCardToHand(ICard card) {
         cards.add(card);
     }
 
+    /**
+     * Спрашивает нужна ли другая карта
+     * @return
+     */
     @Override
     public boolean isNeedAnotherCard() {
         System.out.println(name + ", нужна ли еще карта? Да / Нет");
@@ -33,21 +41,28 @@ public class Player implements IPlayer {
         return "да".equalsIgnoreCase(answer);
     }
 
+    /**
+     * Открывает карты
+     */
     @Override
     public void openCards() {
         for (ICard card : cards) {
             card.open();
-
         }
-
     }
 
+    /**
+     * Считает сумму очков
+     * @return
+     */
     @Override
     public int countValues() {
         int sum = 0;
         for (ICard card : cards) {
             sum+=card.getValue();
+
         }
+
         return sum;
     }
 
