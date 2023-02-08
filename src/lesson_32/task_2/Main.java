@@ -34,9 +34,16 @@ public class Main {
 
 
         TaskExecutor executor1 = new TaskExecutorImpl();
+        TaskExecutor executor2 = new TaskExecutorImpl();
+        TaskExecutor executor3 = new TaskExecutorImpl();
 
         executor1.setStorage(storage);
+        executor2.setStorage(storage);
+        executor3.setStorage(storage);
 
         executor1.start();
+        executor2.start();
+        executor3.start();
+
     }
 }

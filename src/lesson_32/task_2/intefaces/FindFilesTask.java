@@ -11,7 +11,7 @@ import java.io.PrintStream;
  * @author nedis
  * @version 1.0
  */
-public interface FindFilesTask extends Task {
+public interface FindFilesTask extends Task{
 	
 	/**
 	 * Устанавливает путь к директории

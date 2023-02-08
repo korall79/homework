@@ -32,6 +32,6 @@ public class CopyFileTaskImpl extends TaskImpl implements CopyFileTask {
     }
     @Override
     public int getId() {
-        return 0;
+        return id;
     }
 }

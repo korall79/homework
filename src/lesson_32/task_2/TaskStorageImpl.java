@@ -2,6 +2,7 @@ package lesson_32.task_2;
 
 import lesson_32.task_2.intefaces.Task;
 import lesson_32.task_2.intefaces.TasksStorage;
+import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,11 +10,13 @@ import java.util.List;
 public class TaskStorageImpl implements TasksStorage {
 
     private List<Task> tasks = new ArrayList<>();
+    private static Logger log = Logger.getLogger(TaskStorageImpl.class);
 
     @Override
     public synchronized void add(Task task) throws NullPointerException {
         if (task == null) {
-            throw new NullPointerException("Задача не может быть null");
+            log.error("Задача не может быть null");
+            throw new NullPointerException();
         }
         tasks.add(task);
     }
