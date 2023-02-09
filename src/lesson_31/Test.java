@@ -1,7 +1,5 @@
 package lesson_31;
 
-import com.google.common.math.Quantiles;
-
 import java.util.*;
 
 public class Test {
